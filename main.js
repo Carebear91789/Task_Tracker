@@ -12,7 +12,7 @@ function addTaskHTML() {
     for (let i = 0; i < Object.keys(tasks).length; i++) {
         console.log(i);
         task_div = document.createElement("div")
-        document.getElementById("list").appendChild
+        document.getElementById("list").appendChild(task_div)
     }
 }
 
