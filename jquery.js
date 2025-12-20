@@ -1,13 +1,3 @@
 $(document).ready(function(){
-    console.log("Ready");
-    $("p").click(function(){
-        $(this).hide();
-    });
-
-    $("input").click(inputClicked);
-
+    console.log("JQuery Ready");
 });
-
-function inputClicked() {
-    $(this).hide();
-}
