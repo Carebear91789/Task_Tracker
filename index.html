@@ -8,15 +8,18 @@
         <h1>Task Tracker</h1>
         <div id="task_list">
             <div class = task>
-                <input type="checkbox">
+                <input type = "checkbox">
                 <p>Example Task</p>
+                <div class = "garbage_button hoverable_button" hidden="true">
+                    <img src = "assets/trash.png" class = "garbage">
+                </div>
             </div>
         </div>
 
         <div id = "input_bar">
-            <input type = "text" placeholder="New Task" id = "task_name_input">
-            <input type = "datetime-local" id = "due_date">
-            <div id="plus_button">
+            <input type = "text" placeholder="New Task" id = "task_name_input" class = "task_input">
+            <input type = "datetime-local" id = "due_date" class = "task_input hoverable_button">
+            <div id="plus_button" class = "hoverable_button">
                 <img src = "assets/plus.png" id = "plus">
             </div> 
         </div>
