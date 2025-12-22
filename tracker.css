@@ -1,17 +1,47 @@
 :root {
     --theme: #788cde;
+    --background: #1d1d1d;
+    --highlight: #363636;
+    --highlight-unfocus: #292929;
+    --highlight-focus: #3b3b3b;
+    --text: #ffffff;
+
+    --task-spacing: 5px;
+    --border-rad: 5px;
 }
 
 body {
-    background-color: #1d1d1d;
-    color: white;
+    background-color: var(--background);
+    color: var(--text);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
 }
 
-.list {
+#task_list {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+#input_bar {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  height: 47px;
+  gap: 10px;
+  margin-top: var(--task-spacing);
+  margin-bottom: var(--task-spacing);
+}
+
+#input_bar * {
+  margin-top: var(--task-spacing);
+  margin-bottom: var(--task-spacing);
+}
+
+#input_bar input[type="button"] {
+  width: 100px;
 }
 
 .task {
@@ -19,17 +49,21 @@ body {
     flex-direction: row;
     align-items: center;
 
-    background-color: #363636;
+    background-color: var(--highlight);
     /*border: 2px solid #788cde;*/
-    border-radius: 5px;
+    border-radius: var(--border-rad);
 
-    margin: 5px;
+    margin-top: var(--task-spacing);
+    margin-bottom: var(--task-spacing);
     padding: 10px;
-    
 }
 
 .task * {
     margin: 5px;
+}
+
+h1 {
+  color: var(--theme);
 }
 
 p {
@@ -47,7 +81,6 @@ input[type="checkbox"] {
   height: 1.15em;
   border: 0.15em solid currentColor;
   border-radius: 50%;
-  transform: translateY(-0.075em);
 
   display: grid;
   place-content: center;
@@ -67,6 +100,43 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
+}
+
+#input_bar input {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  background-color: var(--highlight-unfocus);
+  border: none;
+  border-radius: var(--border-rad);
+
+  height: 49px;
+  box-sizing: border-box;
+  padding: 10px;
+  color: var(--text);
+}
+
+#task_name_input {
+  width: 100%;
+}
+
+#task_name_input:focus {
+  outline: none;
+  background-color: var(--highlight-focus);
+}
+
+#plus_button {
+  padding: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: var(--border-rad);
+  background-color: var(--theme);
+}
+
+#plus {
+  margin: 0;
+  height: inherit;
+  filter: invert(100%);
 }
 
 /*input[type="checkbox"]:focus {

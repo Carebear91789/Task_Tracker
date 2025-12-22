@@ -6,18 +6,24 @@
 
     <body>
         <h1>Task Tracker</h1>
-        <div class = list id="task_list">
+        <div id="task_list">
             <div class = task>
                 <input type="checkbox">
                 <p>Example Task</p>
             </div>
         </div>
 
-        <!--<input type="text">-->
+        <div id = "input_bar">
+            <input type = "text" placeholder="New Task" id = "task_name_input">
+            <input type = "datetime-local" id = "due_date">
+            <div id="plus_button">
+                <img src = "assets/plus.png" id = "plus">
+            </div> 
+        </div>
         
         <script type="module" src="./firebase_funcs.js"></script>
-        <script type="module" src="./main.js"></script>
+        <!--<script type="module" src="./main.js"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="jquery.js"></script>
+        <script type="module" src="jquery.js"></script>
     </body>
 </html>
