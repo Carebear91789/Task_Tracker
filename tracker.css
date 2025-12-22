@@ -5,6 +5,7 @@
     --highlight-unfocus: #292929;
     --highlight-focus: #3b3b3b;
     --text: #ffffff;
+    --error: #ff5252;
 
     --task-spacing: 5px;
     --border-rad: 5px;
@@ -48,6 +49,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 47px;
+    align-content: stretch;
 
     background-color: var(--highlight);
     /*border: 2px solid #788cde;*/
@@ -60,6 +63,20 @@ body {
 
 .task * {
     margin: 5px;
+}
+
+.garbage_button {
+  padding: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+
+.garbage {
+  margin: 0;
+  height: inherit;
+  filter: invert(47%) sepia(33%) saturate(4637%) hue-rotate(329deg) brightness(101%) contrast(105%);
+  
 }
 
 h1 {
@@ -102,6 +119,10 @@ input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
 
+.hoverable_button {
+  position: relative;
+}
+
 #input_bar input {
   appearance: none;
   -webkit-appearance: none;
@@ -120,9 +141,17 @@ input[type="checkbox"]:checked::before {
   width: 100%;
 }
 
-#task_name_input:focus {
+.task_input:focus {
   outline: none;
   background-color: var(--highlight-focus);
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input[type="datetime-local"]::-webkit-datetime-edit {
+    display:none;
 }
 
 #plus_button {
